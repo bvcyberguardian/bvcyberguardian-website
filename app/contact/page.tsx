@@ -1,5 +1,5 @@
 import ContactForm from "@/components/ContactForm";
-import { Mail, MapPin, Shield } from "lucide-react";
+import { Mail, MapPin, Shield, Phone } from "lucide-react";
 
 export const metadata = {
   title: "Contact | BV CyberGuardian",
@@ -24,12 +24,24 @@ export default function ContactPage() {
           <div className="lg:col-span-2 space-y-6">
             <div className="card-cyber rounded-2xl p-6">
               <div className="flex items-center gap-3 mb-3">
-                <div className="p-2 rounded-lg bg-cyan-500/10">
-                  <Mail className="w-5 h-5 text-cyan-400" />
+                <div className="p-2 rounded-lg bg-[#00c8e0]/10">
+                  <Phone className="w-5 h-5 text-[#00c8e0]" />
+                </div>
+                <h3 className="text-white font-semibold">Call Us</h3>
+              </div>
+              <a href="tel:6463025562" className="text-[#00c8e0] hover:text-white text-sm font-medium transition-colors">
+                (646) 302-5562
+              </a>
+            </div>
+
+            <div className="card-cyber rounded-2xl p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-2 rounded-lg bg-[#00c8e0]/10">
+                  <Mail className="w-5 h-5 text-[#00c8e0]" />
                 </div>
                 <h3 className="text-white font-semibold">Email Us</h3>
               </div>
-              <a href="mailto:info@bvcyberguardian.com" className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+              <a href="mailto:info@bvcyberguardian.com" className="text-[#00c8e0] hover:text-white text-sm transition-colors">
                 info@bvcyberguardian.com
               </a>
             </div>
