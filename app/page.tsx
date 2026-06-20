@@ -4,6 +4,7 @@ import {
   ArrowRight, Phone, Server, Users, Clock, Star
 } from "lucide-react";
 import Credentials from "@/components/Credentials";
+import WhoWeProtect from "@/components/WhoWeProtect";
 
 const stats = [
   { value: "43%", label: "of cyberattacks target small businesses" },
@@ -149,6 +150,9 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* Who We Protect */}
+      <WhoWeProtect />
 
       {/* Threat Awareness */}
       <section className="bg-[#060b17] border-y border-cyan-500/10 py-24">

@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Building2, Camera, Lightbulb, Home } from "lucide-react";
 import BVLogo from "@/components/BVLogo";
 
 const navLinks = [
@@ -14,9 +14,19 @@ const navLinks = [
   { href: "/helpdesk", label: "Help Desk" },
 ];
 
+const whoWeHelp = [
+  { href: "/for-business", label: "Small Businesses", icon: Building2, color: "text-cyan-400" },
+  { href: "/for-creators", label: "Content Creators", icon: Camera, color: "text-violet-400" },
+  { href: "/for-entrepreneurs", label: "Entrepreneurs", icon: Lightbulb, color: "text-amber-400" },
+  { href: "/for-home", label: "Home Users", icon: Home, color: "text-emerald-400" },
+];
+
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const isWhoActive = whoWeHelp.some((l) => pathname === l.href);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a1628]/90 backdrop-blur-md border-b border-[#00c8e0]/10">
@@ -40,6 +50,39 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+
+            {/* Who We Help dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setDropdownOpen(true)}
+              onMouseLeave={() => setDropdownOpen(false)}
+            >
+              <button
+                className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-all ${
+                  isWhoActive
+                    ? "text-[#00c8e0] bg-[#00c8e0]/10"
+                    : "text-slate-300 hover:text-white hover:bg-white/5"
+                }`}
+              >
+                Who We Help
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              {dropdownOpen && (
+                <div className="absolute top-full left-0 mt-1 w-52 bg-[#0d1f3c] border border-[#00c8e0]/15 rounded-xl shadow-2xl py-2 z-50">
+                  {whoWeHelp.map(({ href, label, icon: Icon, color }) => (
+                    <Link
+                      key={href}
+                      href={href}
+                      className="flex items-center gap-3 px-4 py-2.5 hover:bg-white/5 transition-colors"
+                    >
+                      <Icon className={`w-4 h-4 ${color} shrink-0`} />
+                      <span className="text-slate-300 text-sm hover:text-white">{label}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </nav>
 
           <div className="hidden lg:flex items-center gap-3">
@@ -67,6 +110,7 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile menu */}
       {open && (
         <div className="lg:hidden bg-[#0d1f3c] border-t border-[#00c8e0]/10 px-4 py-3 space-y-1">
           {navLinks.map((link) => (
@@ -83,7 +127,21 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <div className="pt-2 pb-1 border-t border-white/5 mt-2 flex flex-col gap-2">
+          <div className="pt-2 border-t border-white/5">
+            <p className="px-3 py-1.5 text-xs text-slate-500 uppercase tracking-wider font-semibold">Who We Help</p>
+            {whoWeHelp.map(({ href, label, icon: Icon, color }) => (
+              <Link
+                key={href}
+                href={href}
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-2 px-3 py-2 rounded-md text-sm text-slate-300 hover:text-white hover:bg-white/5"
+              >
+                <Icon className={`w-4 h-4 ${color}`} />
+                {label}
+              </Link>
+            ))}
+          </div>
+          <div className="pt-2 pb-1 border-t border-white/5 flex flex-col gap-2">
             <a href="tel:6463025562" className="flex items-center gap-2 px-3 py-2 text-sm text-slate-300">
               <Phone className="w-4 h-4 text-[#00c8e0]" /> (646) 302-5562
             </a>
