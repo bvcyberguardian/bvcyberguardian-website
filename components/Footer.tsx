@@ -55,6 +55,7 @@ export default function Footer() {
               {[
                 { href: "/msp", label: "Managed Security" },
                 { href: "/it-consulting", label: "IT Consulting" },
+                { href: "/ai-services", label: "AI Services" },
                 { href: "/helpdesk", label: "Help Desk" },
                 { href: "/services", label: "All Services" },
               ].map(({ href, label }) => (

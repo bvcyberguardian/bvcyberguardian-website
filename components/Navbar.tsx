@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, Phone, ChevronDown, Building2, Camera, Lightbulb, Home } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Building2, Camera, Lightbulb, Home, Brain } from "lucide-react";
 import BVLogo from "@/components/BVLogo";
 
 const navLinks = [
@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/cybernews", label: "CyberNews" },
   { href: "/newsletter", label: "Newsletter" },
   { href: "/helpdesk", label: "Help Desk" },
+  { href: "/ai-services", label: "AI Services" },
 ];
 
 const whoWeHelp = [
