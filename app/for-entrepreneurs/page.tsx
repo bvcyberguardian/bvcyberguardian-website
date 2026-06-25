@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Lightbulb, Shield, Lock, AlertTriangle, CheckCircle, DollarSign, FileText, Mail, Server } from "lucide-react";
 
 export const metadata = {
@@ -29,6 +30,18 @@ const protections = [
 export default function ForEntrepreneursPage() {
   return (
     <div className="pt-24 pb-20">
+      {/* Hero image banner */}
+      <div className="relative h-72 md:h-96 overflow-hidden mb-12">
+        <Image
+          src="/images/audience-entrepreneurs-relaxed.jpg"
+          alt="Entrepreneur relaxed at work"
+          fill
+          priority
+          className="object-cover object-top"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[#0a1628]/65" />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Hero */}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Brain, Shield, Search, FileCheck, Users, Zap, ArrowRight, AlertTriangle, Lightbulb, Settings, GraduationCap, Bot, Lock } from "lucide-react";
 
 export const metadata = {
@@ -94,6 +95,18 @@ const aiThreats = [
 export default function AIServicesPage() {
   return (
     <div className="pt-24 pb-20">
+      {/* Hero image banner */}
+      <div className="relative h-64 md:h-80 overflow-hidden mb-12">
+        <Image
+          src="/images/ai-services-hero.jpg"
+          alt="Glowing AI chip — blue"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[#0a1628]/70" />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Hero */}

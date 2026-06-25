@@ -71,13 +71,17 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="relative flex items-center justify-center overflow-hidden pt-28 pb-20">
+        {/* NYC aerial background */}
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: `linear-gradient(rgba(0,212,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,255,1) 1px, transparent 1px)`,
-            backgroundSize: "60px 60px",
+            backgroundImage: "url('/images/hero-home-nyc.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
-        />
+        >
+          <div className="absolute inset-0 bg-[#0a1628]/45" />
+        </div>
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
