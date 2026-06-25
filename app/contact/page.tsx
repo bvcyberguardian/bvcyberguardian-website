@@ -9,7 +9,7 @@ export const metadata = {
 const pricingTiers = [
   {
     label: "Home & Personal",
-    range: "Starting at $49/mo",
+    range: "Starting at $19/mo",
     desc: "Identity monitoring, device security, family protection",
     color: "text-emerald-400",
     bg: "bg-emerald-500/10",
@@ -17,7 +17,7 @@ const pricingTiers = [
   },
   {
     label: "Creator / Freelancer",
-    range: "Starting at $99/mo",
+    range: "Starting at $29/mo",
     desc: "Account protection, reputation monitoring, breach alerts",
     color: "text-violet-400",
     bg: "bg-violet-500/10",
@@ -25,7 +25,7 @@ const pricingTiers = [
   },
   {
     label: "Small Business / MSP",
-    range: "Starting at $299/mo",
+    range: "Starting at $99/mo",
     desc: "24/7 monitoring, endpoint protection, compliance, help desk",
     color: "text-cyan-400",
     bg: "bg-cyan-500/10",
