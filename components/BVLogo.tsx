@@ -13,7 +13,7 @@ export default function BVLogo({ className = "", variant = "compact" }: BVLogoPr
    * is never clipped. Add 2px bottom padding inside the container to
    * guarantee the bottom edge of the shield doesn't touch the clip boundary.
    */
-  const iconW = variant === "compact" ? 34 : 42;
+  const iconW = variant === "compact" ? 42 : 50;
   const iconH = Math.round(iconW * (132 / 120)); // keep 120:132 aspect ratio
 
   return (
@@ -33,13 +33,13 @@ export default function BVLogo({ className = "", variant = "compact" }: BVLogoPr
       {/* Wordmark */}
       {variant === "compact" ? (
         <div className="leading-none">
-          <div className="text-white font-bold text-base tracking-wide">BV CYBER</div>
-          <div className="text-[#22D3EE] font-bold text-base tracking-widest">GUARDIAN</div>
+          <div className="text-white font-bold text-lg tracking-wide">BV CYBER</div>
+          <div className="text-[#22D3EE] font-bold text-lg tracking-widest">GUARDIAN</div>
         </div>
       ) : (
         <div className="leading-none">
-          <div className="text-white font-bold text-lg tracking-wide">BV CYBER</div>
-          <div className="text-[#22D3EE] font-bold text-lg tracking-widest">GUARDIAN</div>
+          <div className="text-white font-bold text-xl tracking-wide">BV CYBER</div>
+          <div className="text-[#22D3EE] font-bold text-xl tracking-widest">GUARDIAN</div>
         </div>
       )}
     </div>

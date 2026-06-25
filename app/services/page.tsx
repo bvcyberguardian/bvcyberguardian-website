@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { Shield, Server, Phone, Eye, ArrowRight, CheckCircle } from "lucide-react";
+import { Shield, Server, Brain, Eye, ArrowRight, CheckCircle, Layers } from "lucide-react";
 
 export const metadata = {
   title: "Services | BV CyberGuardian",
-  description: "Managed security, IT consulting, help desk, and cybernews — complete cybersecurity coverage for NY & NJ small businesses.",
+  description: "Managed security, IT consulting, AI services, and cybernews — complete cybersecurity coverage for NY & NJ businesses, creators, and families.",
 };
 
 const services = [
@@ -14,13 +14,13 @@ const services = [
     color: "text-cyan-400",
     bg: "bg-cyan-500/10",
     border: "border-cyan-500/20",
-    description: "End-to-end managed security for your business. We monitor, detect, and respond to threats 24/7 so you never have to worry.",
+    description: "End-to-end managed security for your business. We monitor, detect, and respond to threats 24/7 — including a full help desk so your team always has support.",
     features: [
       "24/7 threat monitoring & alerting",
       "Endpoint detection and response (EDR)",
       "Network traffic analysis",
-      "Patch management",
-      "Incident response",
+      "Patch management & incident response",
+      "Help desk — remote & on-site support",
       "Monthly security reporting",
     ],
   },
@@ -42,36 +42,36 @@ const services = [
     ],
   },
   {
-    icon: Phone,
-    title: "Help Desk Support",
-    href: "/helpdesk",
+    icon: Brain,
+    title: "AI Services",
+    href: "/ai-services",
     color: "text-violet-400",
     bg: "bg-violet-500/10",
     border: "border-violet-500/20",
-    description: "Friendly, fast technical support for your employees — remote and on-site — keeping your team productive.",
+    description: "From your first AI tool setup to enterprise AI security — we help businesses, creators, and families get the benefits of AI without the risks.",
     features: [
-      "Remote desktop support",
-      "On-site visits (NY/NJ metro)",
-      "Password & account management",
-      "Software troubleshooting",
-      "Hardware setup & support",
-      "Employee security training",
+      "AI strategy consulting & tool setup",
+      "Workflow automation with AI",
+      "AI security assessments",
+      "AI governance & use policies",
+      "AI threat protection (deepfakes, phishing)",
+      "AI security awareness training",
     ],
   },
   {
     icon: Eye,
-    title: "CyberNews Intelligence",
+    title: "CyberNews & Weekly Briefing",
     href: "/cybernews",
     color: "text-emerald-400",
     bg: "bg-emerald-500/10",
     border: "border-emerald-500/20",
-    description: "Stay informed with real-time cybersecurity news aggregated from the industry's most trusted sources.",
+    description: "Stay informed with real-time cybersecurity news plus a free Monday briefing — plain-English threat intelligence for every audience.",
     features: [
       "Live RSS feeds from top sources",
       "Threat intelligence updates",
-      "Breach notifications",
-      "Vulnerability disclosures",
-      "Best practice advisories",
+      "Breach & vulnerability notifications",
+      "Free weekly email briefing",
+      "Scam alerts & action items",
       "Updated every 30 minutes",
     ],
   },
@@ -82,11 +82,15 @@ export default function ServicesPage() {
     <div className="pt-24 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-5">
+            <Layers className="w-4 h-4" />
+            Everything We Offer
+          </div>
           <h1 className="text-5xl font-extrabold text-white mb-4">
             Our <span className="gradient-text">Services</span>
           </h1>
           <p className="text-slate-400 max-w-xl mx-auto text-lg">
-            Comprehensive cybersecurity and IT services designed for small and mid-sized businesses in the NY/NJ metro region.
+            Comprehensive cybersecurity and IT services for businesses, creators, entrepreneurs, and families across the NY/NJ metro region.
           </p>
         </div>
 
@@ -119,7 +123,7 @@ export default function ServicesPage() {
         <div className="mt-16 text-center card-cyber rounded-2xl py-12 px-6">
           <h3 className="text-2xl font-bold text-white mb-3">Not sure what you need?</h3>
           <p className="text-slate-400 mb-6">
-            We&apos;ll assess your current security posture for free and recommend the right coverage for your business.
+            We&apos;ll assess your current security posture for free and recommend the right coverage for your situation.
           </p>
           <Link
             href="/contact"

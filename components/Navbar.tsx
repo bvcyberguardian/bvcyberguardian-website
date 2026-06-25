@@ -41,10 +41,10 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-all ${
+                className={`px-3 py-2 rounded-md text-base font-semibold transition-all ${
                   pathname === link.href
                     ? "text-[#00c8e0] bg-[#00c8e0]/10"
-                    : "text-slate-300 hover:text-white hover:bg-white/5"
+                    : "text-slate-200 hover:text-white hover:bg-white/5"
                 }`}
               >
                 {link.label}
@@ -52,35 +52,37 @@ export default function Navbar() {
             ))}
 
             {/* Who We Help dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setDropdownOpen(true)}
-              onMouseLeave={() => setDropdownOpen(false)}
-            >
+            <div className="relative">
               <button
-                className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-all ${
-                  isWhoActive
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className={`flex items-center gap-1 px-3 py-2 rounded-md text-base font-semibold transition-all ${
+                  isWhoActive || dropdownOpen
                     ? "text-[#00c8e0] bg-[#00c8e0]/10"
-                    : "text-slate-300 hover:text-white hover:bg-white/5"
+                    : "text-slate-200 hover:text-white hover:bg-white/5"
                 }`}
               >
                 Who We Help
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
               </button>
 
               {dropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 w-52 bg-[#0d1f3c] border border-[#00c8e0]/15 rounded-xl shadow-2xl py-2 z-50">
-                  {whoWeHelp.map(({ href, label, icon: Icon, color }) => (
-                    <Link
-                      key={href}
-                      href={href}
-                      className="flex items-center gap-3 px-4 py-2.5 hover:bg-white/5 transition-colors"
-                    >
-                      <Icon className={`w-4 h-4 ${color} shrink-0`} />
-                      <span className="text-slate-300 text-sm hover:text-white">{label}</span>
-                    </Link>
-                  ))}
-                </div>
+                <>
+                  {/* invisible overlay to close on outside click */}
+                  <div className="fixed inset-0 z-40" onClick={() => setDropdownOpen(false)} />
+                  <div className="absolute top-full left-0 mt-1 w-56 bg-[#0d1f3c] border border-[#00c8e0]/15 rounded-xl shadow-2xl py-2 z-50">
+                    {whoWeHelp.map(({ href, label, icon: Icon, color }) => (
+                      <Link
+                        key={href}
+                        href={href}
+                        onClick={() => setDropdownOpen(false)}
+                        className="flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors"
+                      >
+                        <Icon className={`w-4 h-4 ${color} shrink-0`} />
+                        <span className="text-slate-200 text-base font-medium hover:text-white">{label}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </>
               )}
             </div>
           </nav>
@@ -88,9 +90,9 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <a
               href="tel:6463025562"
-              className="flex items-center gap-1.5 text-sm text-slate-300 hover:text-[#00c8e0] transition-colors"
+              className="flex items-center gap-1.5 text-base font-semibold text-slate-200 hover:text-[#00c8e0] transition-colors"
             >
-              <Phone className="w-3.5 h-3.5" />
+              <Phone className="w-4 h-4" />
               (646) 302-5562
             </a>
             <Link

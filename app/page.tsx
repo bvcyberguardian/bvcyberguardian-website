@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {
   Shield, Lock, Eye, Wifi, AlertTriangle, CheckCircle,
-  ArrowRight, Phone, Server, Users, Clock, Star
+  ArrowRight, Brain, Server, Users, Clock, Star
 } from "lucide-react";
 import Credentials from "@/components/Credentials";
 import WhoWeProtect from "@/components/WhoWeProtect";
@@ -33,10 +33,10 @@ const services = [
     bg: "bg-blue-500/10",
   },
   {
-    icon: Phone,
-    title: "Help Desk",
-    description: "Fast, friendly technical support for your team. Remote and on-site assistance to keep your operations running.",
-    href: "/helpdesk",
+    icon: Brain,
+    title: "AI Services",
+    description: "From AI tool setup and workflow automation to AI security and governance — we help you harness AI safely.",
+    href: "/ai-services",
     color: "text-violet-400",
     bg: "bg-violet-500/10",
   },
