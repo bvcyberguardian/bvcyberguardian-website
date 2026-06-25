@@ -24,7 +24,7 @@ export default function ITConsultingPage() {
             <Server className="w-4 h-4" />
             IT Consulting
           </div>
-          <h1 className="text-5xl font-extrabold text-white mb-4">
+          <h1 className="text-4xl font-extrabold text-white mb-4">
             Strategy Meets <span className="gradient-text">Security</span>
           </h1>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">

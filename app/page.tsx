@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {
-  Shield, Lock, Eye, Wifi, AlertTriangle, CheckCircle,
+  Shield, Lock, Eye, Wrench, Wifi, AlertTriangle, CheckCircle,
   ArrowRight, Brain, Server, Users, Clock, Star
 } from "lucide-react";
 import Credentials from "@/components/Credentials";
@@ -41,10 +41,10 @@ const services = [
     bg: "bg-violet-500/10",
   },
   {
-    icon: Eye,
-    title: "CyberNews",
-    description: "Stay ahead of emerging threats with our live cybersecurity news feed — curated intelligence for NY/NJ business owners.",
-    href: "/cybernews",
+    icon: Wrench,
+    title: "IT Support",
+    description: "Fast remote and on-site tech support — hardware, software, network, and device issues resolved for businesses and homes.",
+    href: "/it-support",
     color: "text-emerald-400",
     bg: "bg-emerald-500/10",
   },
@@ -90,9 +90,8 @@ export default function HomePage() {
             Serving NY &amp; NJ — Businesses, Creators &amp; Families
           </div>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-            Guard Everything That Matters<br />
-            <span className="gradient-text">From Cyber Threats</span>
+          <h1 className="text-4xl font-extrabold text-white leading-tight mb-6">
+            Guard What Matters <span className="gradient-text">From Cyber Threats</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed">

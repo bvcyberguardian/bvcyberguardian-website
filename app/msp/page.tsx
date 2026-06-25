@@ -25,7 +25,7 @@ export default function MSPPage() {
             <Shield className="w-4 h-4" />
             Managed Security Provider
           </div>
-          <h1 className="text-5xl font-extrabold text-white mb-4">
+          <h1 className="text-4xl font-extrabold text-white mb-4">
             Always-On <span className="gradient-text">Cyber Protection</span>
           </h1>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">

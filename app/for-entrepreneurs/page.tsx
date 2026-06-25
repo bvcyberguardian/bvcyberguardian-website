@@ -50,7 +50,7 @@ export default function ForEntrepreneursPage() {
             <Lightbulb className="w-4 h-4" />
             Entrepreneurs &amp; Freelancers
           </div>
-          <h1 className="text-5xl font-extrabold text-white mb-5 leading-tight">
+          <h1 className="text-4xl font-extrabold text-white mb-5">
             Your IP and Clients <span className="gradient-text">Are on the Line</span>
           </h1>
           <p className="text-slate-400 text-lg leading-relaxed">

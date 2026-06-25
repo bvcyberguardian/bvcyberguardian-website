@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Shield, Server, Brain, Eye, ArrowRight, CheckCircle, Layers } from "lucide-react";
+import { Shield, Server, Brain, Wrench, ArrowRight, CheckCircle, Layers } from "lucide-react";
 
 export const metadata = {
   title: "Services | BV CyberGuardian",
@@ -59,20 +59,20 @@ const services = [
     ],
   },
   {
-    icon: Eye,
-    title: "CyberNews & Weekly Briefing",
-    href: "/cybernews",
+    icon: Wrench,
+    title: "IT Support",
+    href: "/it-support",
     color: "text-emerald-400",
     bg: "bg-emerald-500/10",
     border: "border-emerald-500/20",
-    description: "Stay informed with real-time cybersecurity news plus a free Monday briefing — plain-English threat intelligence for every audience.",
+    description: "Responsive remote and on-site tech support for businesses, creators, and home users — hardware, software, network, and device issues resolved fast.",
     features: [
-      "Live RSS feeds from top sources",
-      "Threat intelligence updates",
-      "Breach & vulnerability notifications",
-      "Free weekly email briefing",
-      "Scam alerts & action items",
-      "Updated every 30 minutes",
+      "Remote support — most issues resolved same day",
+      "On-site visits across NY & NJ metro",
+      "Hardware, software & network troubleshooting",
+      "Device setup & configuration",
+      "Data backup & recovery",
+      "Response within 2 business hours",
     ],
   },
 ];

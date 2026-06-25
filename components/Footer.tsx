@@ -54,6 +54,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { href: "/msp", label: "Managed Security & Help Desk" },
+                { href: "/it-support", label: "IT Support" },
                 { href: "/it-consulting", label: "IT Consulting" },
                 { href: "/ai-services", label: "AI Services" },
                 { href: "/services", label: "All Services" },

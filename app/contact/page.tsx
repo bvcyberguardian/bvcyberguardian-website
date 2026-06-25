@@ -38,7 +38,7 @@ export default function ContactPage() {
     <div className="pt-24 pb-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <h1 className="text-5xl font-extrabold text-white mb-4">
+          <h1 className="text-4xl font-extrabold text-white mb-4">
             Let&apos;s <span className="gradient-text">Get You Protected</span>
           </h1>
           <p className="text-slate-400 max-w-xl mx-auto text-lg">

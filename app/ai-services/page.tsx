@@ -115,7 +115,7 @@ export default function AIServicesPage() {
             <Brain className="w-4 h-4" />
             AI Services
           </div>
-          <h1 className="text-5xl font-extrabold text-white mb-4">
+          <h1 className="text-4xl font-extrabold text-white mb-4">
             AI That <span className="gradient-text">Works for You</span> — Safely
           </h1>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">

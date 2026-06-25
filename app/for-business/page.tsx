@@ -50,7 +50,7 @@ export default function ForBusinessPage() {
             <Building2 className="w-4 h-4" />
             Small &amp; Mid-Sized Businesses
           </div>
-          <h1 className="text-5xl font-extrabold text-white mb-5 leading-tight">
+          <h1 className="text-4xl font-extrabold text-white mb-5">
             One Breach Can <span className="gradient-text">Close Your Doors</span>
           </h1>
           <p className="text-slate-400 text-lg leading-relaxed">

@@ -50,7 +50,7 @@ export default function ForCreatorsPage() {
             <Camera className="w-4 h-4" />
             Content Creators &amp; Influencers
           </div>
-          <h1 className="text-5xl font-extrabold text-white mb-5 leading-tight">
+          <h1 className="text-4xl font-extrabold text-white mb-5">
             Your Accounts Are <span className="gradient-text">Your Income</span>
           </h1>
           <p className="text-slate-400 text-lg leading-relaxed">

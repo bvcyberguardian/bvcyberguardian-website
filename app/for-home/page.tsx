@@ -50,7 +50,7 @@ export default function ForHomePage() {
             <Home className="w-4 h-4" />
             Home Users &amp; Families
           </div>
-          <h1 className="text-5xl font-extrabold text-white mb-5 leading-tight">
+          <h1 className="text-4xl font-extrabold text-white mb-5">
             Your Family Deserves <span className="gradient-text">Real Protection</span>
           </h1>
           <p className="text-slate-400 text-lg leading-relaxed">
