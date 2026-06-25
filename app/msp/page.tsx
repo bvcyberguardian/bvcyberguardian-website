@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Shield, Clock, Eye, Lock, Server, CheckCircle, ArrowRight } from "lucide-react";
+import { Shield, Clock, Eye, Lock, Server, CheckCircle, ArrowRight, Phone, Monitor, Users, Wrench } from "lucide-react";
 
 export const metadata = {
   title: "Managed Security Services (MSP) | BV CyberGuardian",
@@ -59,6 +59,38 @@ export default function MSPPage() {
                 <div className="text-4xl font-extrabold gradient-text mb-3">{item.step}</div>
                 <h3 className="text-white font-bold text-lg mb-2">{item.title}</h3>
                 <p className="text-slate-400 text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Help Desk */}
+        <div className="mb-16" id="helpdesk">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-sm font-medium mb-4">
+              <Phone className="w-4 h-4" />
+              Included with MSP Plans
+            </div>
+            <h2 className="text-3xl font-extrabold text-white mb-3">Help Desk Support</h2>
+            <p className="text-slate-400 max-w-xl mx-auto text-base">
+              When something breaks, you need answers — not a ticket number. Every MSP plan includes direct access to knowledgeable technicians who know your environment and get you back to work fast.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { icon: Monitor, title: "Remote Support", desc: "Instant screen-sharing sessions to resolve software issues, configuration problems, and anything else in minutes." },
+              { icon: Users, title: "On-Site Visits", desc: "For hardware problems or complex setups, our technicians come to your NY/NJ location personally." },
+              { icon: Wrench, title: "Hardware & Software", desc: "Setup, installation, troubleshooting, and repairs for all your business devices and applications." },
+              { icon: Clock, title: "Fast Response Times", desc: "We pick up the phone. No ticket queues, no bots — real people who know your environment." },
+              { icon: Users, title: "Employee Training", desc: "Security awareness training for your staff to recognize phishing, social engineering, and unsafe behaviors." },
+              { icon: CheckCircle, title: "Account Management", desc: "Password resets, user provisioning, MFA setup, and access control — quickly and securely." },
+            ].map((s) => (
+              <div key={s.title} className="card-cyber rounded-2xl p-6">
+                <div className="inline-flex p-3 rounded-xl bg-violet-500/10 mb-4">
+                  <s.icon className="w-6 h-6 text-violet-400" />
+                </div>
+                <h3 className="text-white font-bold text-lg mb-2">{s.title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>

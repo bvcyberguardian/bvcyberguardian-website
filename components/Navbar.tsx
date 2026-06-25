@@ -10,10 +10,8 @@ const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/msp", label: "MSP" },
   { href: "/it-consulting", label: "IT Consulting" },
-  { href: "/cybernews", label: "CyberNews" },
-  { href: "/newsletter", label: "Newsletter" },
-  { href: "/helpdesk", label: "Help Desk" },
   { href: "/ai-services", label: "AI Services" },
+  { href: "/cybernews", label: "CyberNews" },
 ];
 
 const whoWeHelp = [

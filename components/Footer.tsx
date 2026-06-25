@@ -53,10 +53,9 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Services</h3>
             <ul className="space-y-2">
               {[
-                { href: "/msp", label: "Managed Security" },
+                { href: "/msp", label: "Managed Security & Help Desk" },
                 { href: "/it-consulting", label: "IT Consulting" },
                 { href: "/ai-services", label: "AI Services" },
-                { href: "/helpdesk", label: "Help Desk" },
                 { href: "/services", label: "All Services" },
               ].map(({ href, label }) => (
                 <li key={href}>
@@ -90,8 +89,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Company</h3>
             <ul className="space-y-2">
               {[
-                { href: "/cybernews", label: "CyberNews" },
-                { href: "/newsletter", label: "Newsletter" },
+                { href: "/cybernews", label: "CyberNews & Briefing" },
                 { href: "/contact", label: "Contact Us" },
                 { href: "/privacy-policy", label: "Privacy Policy" },
               ].map(({ href, label }) => (
